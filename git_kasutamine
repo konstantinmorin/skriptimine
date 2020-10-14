@@ -1,0 +1,18 @@
+#root kasutaja
+install - apt install git
+#user kasutaja
+esmakordselt
+
+seadista nima, mail
+git config --global user.name "Konstantin Morin"
+git config --global user.email "morin.konstantin@khk.ee"
+git config --global core.editor nano
+
+#loo katalog
+mkdir skriptimise_alused
+
+sisene antud kausta
+cd skriptimise_alused
+
+tekita repositoorium
+get init
