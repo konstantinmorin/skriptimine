@@ -3,7 +3,7 @@ install - apt install git
 #user kasutaja
 esmakordselt
 
-seadista nima, mail
+#seadista nima, mail
 git config --global user.name "Konstantin Morin"
 git config --global user.email "morin.konstantin@khk.ee"
 git config --global core.editor nano
@@ -11,8 +11,14 @@ git config --global core.editor nano
 #loo katalog
 mkdir skriptimise_alused
 
-sisene antud kausta
+#sisene antud kausta
 cd skriptimise_alused
 
-tekita repositoorium
+#tekita repositoorium
 get init
+
+#iga faili muudatuse korral:
+get status - kontrolli et fail on muudetud
+git add file_name - lisa fail jälgimissüsteemi
+git commit -m = koosta kirjelduse
+git log - kontrolli, et commit on salvestatud
