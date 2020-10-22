@@ -17,8 +17,10 @@ cd skriptimise_alused
 #tekita repositoorium
 get init
 
-#iga faili muudatuse korral:
-get status - kontrolli et fail on muudetud
-git add file_name - lisa fail jälgimissüsteemi
-git commit -m = koosta kirjelduse
-git log - kontrolli, et commit on salvestatud
+#remote seadistamine:
+a)get remote add nimi address
+git remote add skriptimise_alused https://github.com/konstantinmorin/get_kasutamine.git
+
+b) git remote kontroll
+git remote -v
+
