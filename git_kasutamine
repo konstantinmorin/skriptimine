@@ -24,3 +24,8 @@ git remote add skriptimise_alused https://github.com/konstantinmorin/get_kasutam
 b) git remote kontroll
 git remote -v
 
+#iga faili muudatuse korral:
+get status - kontrolli et fail on muudetud
+git add file_name - lisa fail jälgimissüsteemi
+git commit -m = koosta kirjelduse
+git log - kontrolli, et commit on salvestatud
