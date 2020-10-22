@@ -1,0 +1,5 @@
+#!/bin/bash
+#Se skript on loodud eesmärgiga kirjutada "Tere, kasutajanimi!"
+echo "Tere, "
+whoami
+echo "!"
