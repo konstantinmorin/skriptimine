@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# See skript peab kirjutama ekraanile 
+
+staht=$(whoami | cut -c1 | tr [a-z] [A-Z])
+osa=$(whoami | cut -c2-)
+echo -e "Tere, $staht$osa \n!"
+
+
