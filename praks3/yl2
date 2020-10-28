@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#Kersti Kaljulaid valimise kohta info
+
+aasta="2016"
+president="Kersti Kaljulaid"
+kesk=". aastal valiti Eesti presidendiks"
+lause="$aasta$kesk$president"
+#echo "$aasta"
+#echo "$president"
+#echo "$kesk"
+echo $lause
+#echo "$aasta $kesk $president"
+
