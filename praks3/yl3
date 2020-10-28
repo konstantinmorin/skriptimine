@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#EAP arvutamine
+
+echo "Sisestage ainepunktide arv: "
+read punkt
+echo "Sisestage nädalate arv: "
+read weeks
+var1=($punkt*26)
+var2=($var1/$weeks)
+ymarda= `echo "($var2 + 0.9)/1" | bc`"
+
