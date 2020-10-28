@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#Kalendri tegemine
+data=$(date)
+kal=$(cal)
+echo "Today is: $data"
+echo "Calendar of $kal"
