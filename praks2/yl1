@@ -1,5 +1,6 @@
 #!/bin/bash
-#Se skript on loodud eesmärgiga kirjutada "Tere, kasutajanimi!"
-echo "Tere, "
-whoami
-echo "!"
+#Se skript on loodud eesmärgiga kirjutada "Tere, Kasutajanimi!"
+#2 varianti
+
+echo -ne "Tere, "; whoami && echo "!"
+echo -e "Tere, $USER \n!"
