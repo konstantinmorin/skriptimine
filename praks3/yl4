@@ -1,0 +1,11 @@
+#!/bin/bash
+#This is a comment
+
+echo "Sisestage inimeste arvu: "
+read iarv
+echo "Sisestage mitu kohti bussis: "
+read bus
+let group=($iarv % $bus)
+let busik=($iarv / $bus)
+echo "Bussi on kokku vaja: $busik"
+echo "Inimeste jääk on: $group"
