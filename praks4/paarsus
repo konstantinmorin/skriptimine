@@ -1,0 +1,31 @@
+#!/bin/bash
+#
+
+#kirjuta skripti esimene parameeter
+#echo $1
+#kirjuta mitu parameetreid sai kokku sisestatud
+#echo $#
+
+par1=$1
+arv=$(($par1 % 2))
+#echo $arv
+#kontrollime kasutaja poolt sisestatud andmed
+if [ $1 -eq 0 ];
+then
+	#kui sisestatud 0, siis saada temale järgmine sõnum
+	echo "Kaivita see skript koos arvuga mille paarsus soovid kontrollida. Näiteks:  ./paarsus 3"
+else
+	#kontrollime, et parameeter ei oleks tühi
+	if [ -z $par1 ];
+	then
+		echo "Sisestatud parameeter ei saa olla tühi!!! Näiteks:  ./paarsus 3"
+	else
+	#kui kõik tingimused on õigesti täidetud, siis kontrollime kas tegemist on paaris arvuga või mitte
+		if [ $arv -eq 0 ];
+		then
+			echo "Antud arv on paaris"
+		else
+			echo "Antud arv on paaritu"
+		fi
+	fi
+fi
