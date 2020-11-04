@@ -1,0 +1,14 @@
+#!/bin/bash
+#Skript arvutab sisestatud arvu numbrite summat ja väljastama koos selgitava tekstiga
+
+echo -n "Sisesta suvaline täisarv: "
+read arv
+summa=0
+#tee niikaua et arv ei võrdu 0-ga
+while [ $arv -ne 0 ]
+do
+	jaak=$(($arv % 10))
+	summa=$(($summa + $jaak))
+	arv=$(($arv / 10))
+done
+echo $summa
