@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo -n "Sisesta kuu number: "
+read number
+
+if test $number -eq 1 -o $number -eq 2 -o $number -eq 12
+then
+	echo "Praegu on talv"
+else
+	if test  $number -ge 3 -a $number -le 5
+	then
+		echo "Kevad"
+	else
+		if test $number -ge 6 -a $number -le 8
+		then
+			echo "Suvi"
+		else
+			if test $number -ge 9 -a $number -le 11
+			then
+				echo "Sügis"
+			else
+				echo "Teie sisestatud number on vale!"
+			fi
+		fi
+	fi
+fi
