@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo -n "Palun sisestage oma vanus: "
+read vanus
+if test $vanus -gt 0 -a $vanus -lt 11
+then
+	echo "Oled laps"
+else
+	if test $vanus -gt 11 -a $vanus -lt 18
+	then
+		echo "Oled nooruk"
+	else
+		if test $vanus -gt 18 -a $vanus -lt 63
+		then
+			echo "Oled täiskasvanu"
+		else
+			if test $vanus -gt 63 -a $vanus -lt 130
+			then
+				echo "Oled senjoor"
+			else
+				if test $vanus -gt 130
+				then
+					echo "Teie sisestatud number on vale, proovige uuesti!"
+				fi
+			fi
+		fi
+	fi
+fi
