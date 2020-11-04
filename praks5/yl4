@@ -1,0 +1,24 @@
+#!/bin/bash
+
+#Kasutaja, kellena sa oled sisse loginud aja järgi tervitamine
+
+#järgmiselt eraldame kuupäevast ainult tunnid
+hour=(`date +"%H"`)
+#echo $hour
+staht=$(whoami | cut -c1 | tr [a-z] [A-Z])
+osa=$(whoami | cut -c2-)
+
+
+#kontrollime milline päevaosa hetkel on ning vastavalt sellele pridime sõnumi
+if [ $hour -ge 6 -a $hour -lt 12 ]; then
+        echo "Tere hommikust, $staht$osa!"
+elif [ $hour -ge 12 -a $hour -lt 18 ]; then
+        echo "Tere päevast, $staht$osa!"
+elif [ $hour -ge 18 -a $hour -lt 22 ]; then
+        echo "Tere õhtust, $staht$osa!!"
+elif [ $hour -ge 22 -a $hour -lt 24 ] || [ $hour -ge 0 -a $hour -lt 6 ]; then
+        echo "Head ööd,  $staht$osa!"
+else
+        echo "Vale number sisestadud, ole tähelepanelik,  $staht$osa!"
+fi
+
