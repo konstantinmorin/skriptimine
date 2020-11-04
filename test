@@ -1,0 +1,22 @@
+#!/bin/bash
+#10 inimese arvu väljastamine for tsükliga
+for (( arv=1; arv<11; arv++ ))
+do
+	echo $arv
+done
+#skripti lõpp
+
+echo ""
+#10 inimese arvu väljastamine foreach tsükliga
+for arv in {1..10}
+do
+	echo $arv
+done
+#skripti lõpp
+
+#for tsükli näide
+for (( kord=1; kord<=5; kord++ ))
+do
+	echo "suvaline tegevus"
+done
+#skripti lõpp
