@@ -1,11 +1,20 @@
 #!/bin/bash
 #This is a comment
 
-echo "Sisestage inimeste arvu: "
+echo -n "Sisestage inimeste arvu: "
 read iarv
-echo "Sisestage mitu kohti bussis: "
+echo -n "Sisestage mitu kohti bussis: "
 read bus
-let group=($iarv % $bus)
-let busik=($iarv / $bus)
-echo "Bussi on kokku vaja: $busik"
-echo "Inimeste jääk on: $group"
+#arvutame mitu bussi on vaja
+yle=$(($iarv % $bus))
+#arvutame mitu inimest jääb üle
+group=$(($iarv / $bus))
+#kui on olemas ülejaanud, tuleb suurendada busside arv ühe võrra
+if test $group -gt 0
+then
+	#"group" muutuja vajab üledefineerimist, selle pärast ümber salvestamiseks ei kasuta "$" marki
+	group=$(($group +1))
+fi
+#tulemuste väljastamine
+echo "Inimse, kes jääb üle: $yle"
+echo "Bussi on kokku vaja: $group"
