@@ -1,0 +1,27 @@
+#!/bin/bash
+
+#Konstantin Morin, VTo20
+#Skript peab väljastama "*" hakenevas järjekorras
+
+echo -n "Palun sisestage soovitud ridade arv: "
+read arv
+#kontrollime, et sisestatud number ei oleks null
+if [ $arv = 0 ]
+then
+	#väljastame veateade, kui on  sisestatud null
+	echo "Palun sisestage number, mis oleks rokhem, kui null!"
+else
+	#tee senikaua, et sisestatud kasutaja poolt ei ole vähem või võrdub sisestatud numbriga
+	for (( i=1; i<=$arv; i++ ))
+	do
+		#tee senikaua j väiksem või võrdub i-ga
+		for (( j=1; j<=i; j++ ))
+		do
+			#printida ekraanile tärni
+			echo -n "* "
+		done
+	#teeme peale sisemise tsükli lõppu reavahetuse
+	echo ""
+	#väljund läheb vastupidises järjekorras
+	done | tac 
+fi
