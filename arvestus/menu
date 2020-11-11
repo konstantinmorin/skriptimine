@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#Konstantin Morin, VTo20
+#Menüü väljastamine kasutajale
+
+echo "1) liha ja kartulid"
+echo "2) kala ja krõpsud"
+echo "3) supp ja salat"
+echo -n "Palun tee oma valik (1 või 2 või 3): "
+read valik
+if [ $valik = 1 ]; then
+	echo "Väga maitsev, aga jälgi oma tervist!"
+	echo "Head isu!"
+elif [ $valik = 2 ]; then
+	echo "Brititoit on maitsev!"
+	echo "Head isu!"
+elif [ $valik = 3 ]; then
+	echo "Nii tervislik ja igav..."
+	echo "Head isu!"
+else
+	echo "Te peate valima 1, 2 ja 3 vahel ainult! Palun proovige uuesti."
+fi
