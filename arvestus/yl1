@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#Seda ülesannet tegi Konstantin Morin. Siin skript tervitab sisse logitud kasutajad nind seejärel väljastab 
+#aeg järgmisel kujul: "Täna on 11.11.2020 kell 8:45"
+
+staht=$(whoami | cut -c1 | tr [a-z] [A-Z])
+osa=$(whoami | cut -c2-)
+#echo $staht
+#echo $osa
+echo "1. Tere, $staht$osa!"
+
+#lõikame tunnid date-st
+hour=(`date +"%H"`)
+#lõikame minutit date-st
+min=(`date +"%M"`)
+#ühendate tunnid ja minutid
+time=($hour":"$min)
+#lõikame kuupäeva
+kuup=(`date +"%m.%d.%Y"`)
+#echo $hour
+#echo $min
+#echo $kuup
+echo "2. Täna on $kuup kell $time"
