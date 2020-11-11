@@ -3,20 +3,27 @@
 #Konstantin Morin, VTo20
 #Menüü väljastamine kasutajale
 
+#väljastame teksti:
 echo "1) liha ja kartulid"
 echo "2) kala ja krõpsud"
 echo "3) supp ja salat"
 echo -n "Palun tee oma valik (1 või 2 või 3): "
+#loeme sisestadu kasutaja poolt infot
 read valik
+#kontrollime mis valikut on kasutaja teinud
 if [ $valik = 1 ]; then
+	#kui on 1, siis järgmise info väljastamine
 	echo "Väga maitsev, aga jälgi oma tervist!"
 	echo "Head isu!"
 elif [ $valik = 2 ]; then
+	#kui on 2, siis järgmise info väljastamine
 	echo "Brititoit on maitsev!"
 	echo "Head isu!"
 elif [ $valik = 3 ]; then
+	#kui on 3, siis järgmise info väljastamine
 	echo "Nii tervislik ja igav..."
 	echo "Head isu!"
 else
+	#muu juhul info väljastamine
 	echo "Te peate valima 1, 2 ja 3 vahel ainult! Palun proovige uuesti."
 fi
