@@ -11,4 +11,5 @@ do
 	summa=$(($summa + $jaak))
 	arv=$(($arv / 10))
 done
-echo $summa
+echo "Сумма чисел числа будет: $summa"
+
