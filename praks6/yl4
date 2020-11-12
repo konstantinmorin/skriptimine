@@ -1,0 +1,28 @@
+#!/bin/bash
+#algarvu tuvastamine
+
+echo -e "Siseta suvaline arv \c"
+read arv
+#kontrollime kui on 0 või 1, siis teade
+if [ $arv -ew -o $arv -eq 1 ]; then
+	echo "$arv - ei ole algarv"
+else
+	#muu juhul jagame jagajaga, mis võrdub 2
+	jagaja=2
+	jaak=$(($arv % jagaja))
+	#teeme senikaua jaak=0
+	while [ $jaak -ne 0 ]
+	do 
+		#Lisame jagajale 1
+		jagaja=$(($jagaja + 1))
+		#jagame arv jagajaga
+		jaak=$(($arv % $jagaja))
+	done
+	if [ $arv -eq $jagaja ]; then
+		#kontrollime kui arv=jagaja, siis järgmine teade:
+		echo "$arv - on algarv"
+	else
+		#teistel juhtude järmine teade:
+		echo "$arv - ei ole algarv"
+	fi
+fi
