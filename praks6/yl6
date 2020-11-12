@@ -1,3 +1,4 @@
+#!/bin/bash
 #skript peab küsima kasutajalt mitu rida tuleb sisestada ja mitu * reas peab olema
 
 echo -n "Sisestage ridade arv: "
@@ -17,5 +18,5 @@ do
     	done
   	echo "" #### print the new line ###
 	#lisame n-le 1 juurde, järgmise reaga väljastatakse 2
-	n=$n+1
+	n=n+1
 done
