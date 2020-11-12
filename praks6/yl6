@@ -1,0 +1,21 @@
+#skript peab küsima kasutajalt mitu rida tuleb sisestada ja mitu * reas peab olema
+
+echo -n "Sisestage ridade arv: "
+read rida
+echo -n "Sisestage tärnide arv reas: "
+read tarn
+#määrame n=1
+n=1
+
+for (( i = 1; i <= $rida; i++ ))      ### Outer for loop ###
+do
+	#nüüd väljastame n väärtuse
+	echo -n "$n. "
+	for (( j = 1 ; j <= $tarn; j++ )) ### Inner for loop ###
+	do
+	   	echo -n "* "
+    	done
+  	echo "" #### print the new line ###
+	#lisame n-le 1 juurde, järgmise reaga väljastatakse 2
+	n=$n+1
+done
