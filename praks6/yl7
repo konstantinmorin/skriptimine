@@ -1,0 +1,16 @@
+#!/bin/bash
+#skript väljastab * vastavalt sisestatud ridade arvudele
+
+echo -n "Sisesta ridade arv: "
+read rida
+
+for (( i = 1; i <= $rida; i++ ))      ### Outer for loop ###
+do
+	#nüüd väljastame n väärtuse
+	 echo -n "1. "
+	for (( j = 1 ; j <= $rida; j++ )) ### Inner for loop ###
+	do
+	   	echo -n "* "
+    	done
+  	echo "" #### print the new line ###
+done
