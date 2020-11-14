@@ -4,11 +4,14 @@
 echo -n "Sisesta ridade arv: "
 read rida
 
+#teeme senikaua i ei ole sama väärtusega, mis oli kasutaja poolt sisestatud
 for (( i = 1; i <= $rida; i++ ))      ### Outer for loop ###
 do
-	#nüüd väljastame n väärtuse
-	 echo -n "1. "
-	for (( j = 1 ; j <= $rida; j++ )) ### Inner for loop ###
+	#nüüd väljastame numbrid iga rea algusesse
+	echo -n "$i. "
+	#nüüd kontrollime, kui j=i siis lõpetame tsükli;
+	# ehk kui i=1, siis ka j=1, väljastatakse 1 kord; i=2, siis j=2, 2 korda jne
+	for (( j = 1; j <= i; j++ )) ### Inner for loop ###
 	do
 	   	echo -n "* "
     	done
