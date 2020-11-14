@@ -14,7 +14,8 @@ do
 done
 #skripti lõpp
 
-#for tsükli näide
+#for tsükli näide - trükitakse "suvaline tegevus" nii palju korda, kui plaju on määratud
+#"kord" muutujale, siis tsükkel lõpeb ära
 for (( kord=1; kord<=5; kord++ ))
 do
 	echo "suvaline tegevus"
