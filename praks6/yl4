@@ -3,6 +3,7 @@
 
 echo -e "Siseta suvaline arv \c"
 read arv
+
 #kontrollime kui on 0 või 1, siis teade
 if [ $arv -eq 0 -o $arv -eq 1 ]; then
 	echo "$arv - ei ole algarv"
