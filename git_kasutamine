@@ -1,7 +1,7 @@
 #root kasutaja
 install - apt install git
-#user kasutaja
-esmakordselt
+
+#user kasutaja esmakordselt
 
 #seadista nima, mail
 git config --global user.name "Konstantin Morin"
@@ -27,6 +27,10 @@ git remote -v
 #iga faili muudatuse korral:
 get status - kontrolli et fail on muudetud
 git add file_name - lisa fail jälgimissüsteemi
-git commit -m = koosta kirjelduse
+git commit -m "tekst" = koosta kirjelduse
 git log - kontrolli, et commit on salvestatud
 git push - lükka github.com asuva repositooriumi
+
+#kui on tekkinud probleeme
+git clone URL.git - tõmbab serverist kõik failid alla sinu kausta
+git pull URL.git - kopeerib failid, mis siu arvutist puudu
