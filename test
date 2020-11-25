@@ -1,4 +1,5 @@
 #!/bin/bash
+#skript väljastab inimeste arvu, tulemus on sama, kuigi kasutatakse 2 erineva konstruktsiooniga tsüklit
 #10 inimese arvu väljastamine for tsükliga
 for (( arv=1; arv<11; arv++ ))
 do
